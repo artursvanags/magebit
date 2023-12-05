@@ -1,0 +1,64 @@
+@layer components {
+    .btn {
+        @apply flex bg-gray-500 rounded-lg px-4 py-2 text-white text-base font-medium items-center;
+
+        @screen md {
+            @apply px-6 text-lg;
+        }
+        @screen xl {
+            @apply text-base;
+        }
+
+        svg {
+            @apply inline-flex;
+        }
+
+        span {
+            vertical-align: middle;
+        }
+
+        &:hover {
+            @apply bg-gray-600;
+        }
+
+        &:focus {
+            @apply outline-none border-transparent;
+        }
+    }
+
+    .btn-primary {
+        @apply bg-[#0F8352] text-white;
+
+        &:hover {
+            @apply bg-[#14AE6D] text-white;
+        }
+
+        &:active {
+            @apply bg-[#0A5737];
+        }
+    }
+
+    .btn-secondary {
+        @apply bg-white border-2 border-primary-lighter text-black shadow-md;
+
+        &:hover {
+            @apply bg-white border-primary-darker shadow-lg;
+        }
+
+        &:focus {
+            @apply border-2 border-transparent;
+        }
+    }
+
+    .btn-size-lg {
+        @apply px-10 py-4 text-lg;
+    }
+
+    .btn-size-sm {
+        @apply px-2 py-2 text-sm;
+    }
+
+    .actions-toolbar .primary button {
+        @apply btn btn-primary;
+    }
+}
